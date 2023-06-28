@@ -1,0 +1,7 @@
+arr=%w(a b c d f e g h  j k l m p o n 1 6 5 4 3 2)
+print arr.sort
+arr2=gets.chomp.chars
+puts arr2.sort
+ 
+price={choco:100,bus:4000000,car:1000000}
+puts price.sort_by{|k,v|v}
