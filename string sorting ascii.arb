@@ -1,0 +1,39 @@
+def check_string(str)
+    return str.chars.sort.join
+ end
+ puts check_string ("abced")
+ puts check_string ("abc12ed")
+
+
+ 
+# another approach using sort method
+ def sort_string_by_ascii(string)
+    words = string.chars
+  print  words # returns array 
+   puts  words.sort_by! { |char| char.ord }# returns dehllloorw vertically.... no join
+   words.join # return dehllloorw with joins
+  end
+  puts "this is sorted String" + sort_string_by_ascii("hello world")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The `sort_string_by_ascii()` method takes a string as input 
+# and returns a new string with the words sorted in order based on their ASCII values.
+# The method uses the `sort_by!()` method to sort the words in the input string. 
+# The `sort_by!()` method takes a block as an argument, which is used to compare two elements of the array.
+#  In this case, the block compares the ASCII values of the two words. 
+# The words are sorted in ascending order based on their ASCII values. 
+# The method then joins the words into a new string and returns the new string.
+# In this example, the input string is "hello world". 
+# The output string is "deehllowor". 
+# The words in the output string are sorted in order based on their ASCII values. 
