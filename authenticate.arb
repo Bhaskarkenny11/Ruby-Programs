@@ -1,0 +1,35 @@
+users=[
+    {username:"bhaskar", password:"kenny"},
+    {username:"tony", password:"stark"}
+]
+
+puts "welcome to authenticator project"
+20.times{print"------"}
+puts 
+puts"this program compares the given input with array"
+puts"if matches rreturns array"
+def authent(username,password,users)
+    users.each do |user_record| 
+        if  user_record[:username] ==username && user_record[:password] ==password
+            return user_record 
+        else
+            return "incorrect details"                 
+        end
+    end
+  end
+attempts =1
+while attempts<3
+    puts "enter user name"
+    username=gets.chomp
+       puts "enter password" 
+    password=gets.chomp
+      authent(username,password,users)
+    puts " press n to quit or anyother keys to continue:"
+     input= gets.chomp.downcase
+      if input== "n"
+        break
+      end
+   attempts+=1
+end
+puts"you have exceeded the number of attempts " if attempts == 3
+    
